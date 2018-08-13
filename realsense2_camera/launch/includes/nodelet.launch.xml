@@ -56,9 +56,9 @@
   <arg name="infra2_optical_frame_id"  default="$(arg tf_prefix)camera_infra2_optical_frame"/>
   <arg name="color_optical_frame_id"   default="$(arg tf_prefix)camera_color_optical_frame"/>
 
-  <arg name="camera_aligned_depth_to_color_frame_id"   default="$(arg tf_prefix)camera_aligned_depth_to_color_frame"/>
-  <arg name="camera_aligned_depth_to_infra1_frame_id"   default="$(arg tf_prefix)camera_aligned_depth_to_infra1_frame"/>
-  <arg name="camera_aligned_depth_to_infra2_frame_id"   default="$(arg tf_prefix)camera_aligned_depth_to_infra2_frame"/>
+  <arg name="aligned_depth_to_color_frame_id"   default="$(arg tf_prefix)camera_aligned_depth_to_color_frame"/>
+  <arg name="aligned_depth_to_infra1_frame_id"   default="$(arg tf_prefix)camera_aligned_depth_to_infra1_frame"/>
+  <arg name="aligned_depth_to_infra2_frame_id"   default="$(arg tf_prefix)camera_aligned_depth_to_infra2_frame"/>
 
 
   <node pkg="nodelet" type="nodelet" name="$(arg manager)" args="manager" output="screen"/>
@@ -109,6 +109,10 @@
     <param name="infra1_optical_frame_id"  type="str"  value="$(arg infra1_optical_frame_id)"/>
     <param name="infra2_optical_frame_id"  type="str"  value="$(arg infra2_optical_frame_id)"/>
     <param name="color_optical_frame_id"   type="str"  value="$(arg color_optical_frame_id)"/>
+    
+    <param name="aligned_depth_to_color_frame_id"    type="str"  value="$(arg aligned_depth_to_color_frame_id)"/>
+    <param name="aligned_depth_to_infra1_frame_id"   type="str"  value="$(arg aligned_depth_to_infra1_frame_id)"/>
+    <param name="aligned_depth_to_infra2_frame_id"   type="str"  value="$(arg aligned_depth_to_infra2_frame_id)"/>
 
     <param name="enable_tf_dynamic" type="bool" value="true"/>
     <!-- <param name="base_frame_id" type="str" value="hand_camera_link"/> -->
